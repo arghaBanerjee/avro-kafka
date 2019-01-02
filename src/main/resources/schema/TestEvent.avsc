@@ -1,0 +1,9 @@
+{
+    "namespace":"com.tw.avro.objects",
+    "type": "record",
+    "name": "TestEvent",
+    "fields": [
+        { "name": "key", "type": "string" },
+        { "name": "value", "type": "int" }
+    ]
+}

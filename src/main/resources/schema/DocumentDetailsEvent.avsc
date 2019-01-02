@@ -1,0 +1,29 @@
+{
+    "namespace":"com.tw.avro.objects",
+    "type": "record",
+    "name": "DocumentDetailsEvent",
+    "fields": [
+        { "name": "key", "type": "string" },
+        { "name": "name", "type": "string" },
+        { "name": "type", "type": "string" },
+        { "name": "time", "type": { "type" : "long", "logicalType": "timestamp-millis"} },
+        { "name": "profile", "type": "string"},
+        { "name": "document",
+            "type": {
+                "type" : "record",
+                "name" : "DocumentDetails",
+                "fields" :  [
+                             { "name": "document_id", "type": "string" },
+                             { "name": "document_type", "type": "string" },
+                             { "name": "issuer_country", "type": "string" },
+                             { "name": "issue_date", "type": { "type" : "int", "logicalType" : "date"} },
+                             { "name": "expiry_date", "type": { "type" : "int", "logicalType": "date"} },
+                             { "name": "first_name", "type": "string" },
+                             { "name": "last_name", "type": "string" },
+                             { "name": "nationality", "type": "string" }
+                            ]
+                    }
+
+        }
+    ]
+}
